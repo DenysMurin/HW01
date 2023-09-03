@@ -1,0 +1,13 @@
+.logo {
+  color: #111111;
+}
+
+.nav-link {
+  color: #111111;
+}
+
+.nav-link:focus {
+    color: #FD9222;
+  }
+  .hero-section{background-color: #1E1823;/*TODO: replac with image*/}
+  .hero-title{color:#ffffff}
