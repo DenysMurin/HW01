@@ -27,7 +27,7 @@
             <a class="logo" href="./index.html">
               <span class="logo-accent">Simply</span>chocolate
 
-              <svg width="24">
+              <svg width="24" height="24">
                 <use href="./Images/icons.svg#icon-chocolate"></use>
               </svg>
             </a>
@@ -41,13 +41,13 @@
           </nav>
           <div class="header-socials">
             <a href="#" target="_blank">
-              <svg width="24">
+              <svg class="header-socials-link" width="24" height="24">
                 <use href="./Images/icons.svg#icon-instagram"></use>
               </svg>
             </a>
-            
+
             <a href="#" target="_blank">
-              <svg width="24">
+              <svg class="header-socials-link" width="24" height="24">
                 <use href="./Images/icons.svg#icon-twitter"></use>
               </svg>
             </a>
@@ -65,35 +65,32 @@
               moment of pure delight!
             </h1>
             <div class="hero-actions">
-              <button class="button-primary" type="button">Buy now</button>
+              <button class="button-primary" type="button" data-modal-open>Buy now</button>
               <a class="hero-button" href="#">How it’s made</a>
-              <a class="hero-scroll-down" href="#"
+              <a class="hero-arrow" href="#advantage-section"
                 >scroll down
-                <svg width="24">
-                  <use href="./Images/icons.svg#icon-arrow"></use>
-                </svg>
-                
+                <div class="hero-arrow-link">
+                  <svg width="22" height="22">
+                    <use href="./Images/icons.svg#icon-arrow"></use>
+                  </svg>
+                </div>
               </a>
             </div>
           </div>
         </div>
       </section>
       <!-- Advantages section -->
-      <section class="advantage-section">
+      <section id="advantage-section" class="advantage-section">
         <div class="container">
           <!-- TODO: hide this title -->
           <h2 class="visually-hidden">Our advantages</h2>
           <ul class="advantage-list">
             <li class="advantage-item">
-
-              <img
-              class="advantage-icon"
-              src="./Images/icons/chocolate-bar.svg"
-              alt="chocolate bar"
-            />
-
-              
-
+              <div class="advantage-icon">
+                <svg width="32" height="32">
+                  <use href="./Images/icons.svg#icon-chocolate-bar"></use>
+                </svg>
+              </div>
 
               <h3 class="advantage-title">Unsurpassed taste</h3>
               <p class="advantage-text">
@@ -104,11 +101,11 @@
               </p>
             </li>
             <li class="advantage-item">
-              <img
-              class="advantage-icon"
-              src="./Images/icons/coin.svg"
-              alt="coin"
-            />
+              <div class="advantage-icon">
+                <svg width="32" height="32">
+                  <use href="./Images/icons.svg#icon-coin"></use>
+                </svg>
+              </div>
               <h3 class="advantage-title">Affordable price</h3>
               <p class="advantage-text">
                 Indulge in high-quality chocolate without breaking the bank with
@@ -119,11 +116,11 @@
               </p>
             </li>
             <li class="advantage-item">
-              <img
-                class="advantage-icon"
-                src="./Images/icons/spoon.svg"
-                alt="spoon"
-              />
+              <div class="advantage-icon">
+                <svg width="32" height="32">
+                  <use href="./Images/icons.svg#icon-spoon"></use>
+                </svg>
+              </div>
               <h3 class="advantage-title">Own production</h3>
               <p class="advantage-text">
                 We take pride in our own production process, ensuring that every
@@ -138,7 +135,7 @@
       <!-- Ingridients section -->
       <section class="section">
         <div class="container">
-          <h2 class="ingridients-title">
+          <h2 class="section-title">
             It all adds up to one exceptional taste sensation
           </h2>
           <p class="ingridients-subtitle">
@@ -195,7 +192,7 @@
       <!-- How its made(VIDEO) section -->
       <section class="section">
         <div class="container">
-          <h2>How it's made?</h2>
+          <h2 class="section-title">How it's made?</h2>
           <div class="video-inner">
             <div class="video-media">
               <!-- пример вставки видео, а вообще тут картинка TODO: chenge to video
@@ -243,7 +240,176 @@
           </div>
         </div>
       </section>
+      <!-- Our products section -->
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">Our products</h2>
+          <ul class="product-list">
+            <li class="product-item">
+              <article class="product">
+                <div class="product-image">
+                  <img
+                    class="product-photo"
+                    src="./Images/products/orange.png"
+                    alt="orange"
+                    width="230"
+                    height="201"
+                  />
+                  <div class="product-overlay">
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Nostrum, laborum? Modi cupiditate recusandae nam
+                      laudantium! Consequuntur sit minima tenetur! Beatae?
+                    </p>
+                  </div>
+                </div>
+                <h3 class="product-name">orange</h3>
+                <p class="product-description">Dark chocolate</p>
+                <span class="product-price">45 uah</span>
+              </article>
+            </li>
+            <li class="product-item">
+              <article class="product">
+                <div class="product-image">
+                  <img
+                    class="product-photo"
+                    src="./Images/products/apple.png"
+                    alt="apple&cranberry"
+                    width="230"
+                    height="201"
+                  />
+                  <div class="product-overlay">
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Nostrum, laborum? Modi cupiditate recusandae nam
+                      laudantium! Consequuntur sit minima tenetur! Beatae?
+                    </p>
+                  </div>
+                </div>
+                <h3 class="product-name">apple&cranberry</h3>
+                <p class="product-description">Milk chocolate</p>
+                <span class="product-price">45 uah</span>
+              </article>
+            </li>
+            <li class="product-item">
+              <article class="product">
+                <div class="product-image">
+                  <img
+                    class="product-photo"
+                    src="./Images/products/lime.png"
+                    alt="lime&sea salt"
+                    width="230"
+                    height="201"
+                  />
+                  <div class="product-overlay">
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Nostrum, laborum? Modi cupiditate recusandae nam
+                      laudantium! Consequuntur sit minima tenetur! Beatae?
+                    </p>
+                  </div>
+                </div>
+                <h3 class="product-name">lime&sea salt</h3>
+                <p class="product-description">Dark chocolate</p>
+                <span class="product-price">45 uah</span>
+              </article>
+            </li>
+            <li class="product-item">
+              <article class="product">
+                <div class="product-image">
+                  <img
+                    class="product-photo"
+                    src="./Images/products/pineapple.png"
+                    alt="pineapple"
+                    width="230"
+                    height="201"
+                  />
+                  <div class="product-overlay">
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Nostrum, laborum? Modi cupiditate recusandae nam
+                      laudantium! Consequuntur sit minima tenetur! Beatae?
+                    </p>
+                  </div>
+                </div>
+                <h3 class="product-name">pineapple</h3>
+                <p class="product-description">Dark chocolate</p>
+                <span class="product-price">45 uah</span>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- section Review -->
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">Chocolate is loved</h2>
+          <ul class="reviews-list">
+            <li class="reviews-item">
+              <article class="review">
+                <img
+                  class="review-image"
+                  src="./Images/review/victoria.png"
+                  alt="Victoria Dobrzhanska"
+                  width="80"
+                />
+                <h3 class="review-name">Victoria Dobrzhanska</h3>
+                <p class="review-description">
+                  I love this chocolate bar. Perfect combination of light crispy
+                  wafer, covered in a thin layer chocolate.
+                </p>
+              </article>
+            </li>
+            <li class="reviews-item">
+              <article class="review">
+                <img
+                  class="review-image"
+                  src="./Images/review/nazar.png"
+                  alt="Nazar Babenko"
+                  width="80"
+                />
+                <h3 class="review-name">Nazar Babenko</h3>
+                <p class="review-description">
+                  This chocolate confection is a delight! A delight! The wafer
+                  is light and crisp, the hazelnut cream is smooth, and the
+                  chocolate is good.
+                </p>
+              </article>
+            </li>
+            <li class="reviews-item">
+              <article class="review">
+                <img
+                  class="review-image"
+                  src="./Images/review/olena.png"
+                  alt="Olena Kampusch"
+                  width="80"
+                />
+                <h3 class="review-name">Olena Kampusch</h3>
+                <p class="review-description">
+                  Chocolate is a family favourite treat. Love the delicious
+                  smooth chocolate and the creaminess inside. The wafer is soft
+                  but crunchy.
+                </p>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
     <footer></footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-close" data-modal-close>X</button>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, fuga
+          iusto quia natus tenetur quam earum ullam vitae maxime rem error iure
+          dolorum esse perferendis tempore excepturi similique suscipit
+          laboriosam in minima nostrum facilis itaque quibusdam dignissimos.
+          Quam quaerat, soluta sapiente, beatae enim laudantium veritatis, vel
+          eius officiis atque quia.
+        </p>
+      </div>
+    </div>
+    <!-- <script>сюда подключается управление открітием и закрітием окна</script> -->
   </body>
 </html>
