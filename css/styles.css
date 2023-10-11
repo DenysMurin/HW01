@@ -42,7 +42,11 @@ img {
 button {
   font-family: inherit;
 }
-
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
 /* все что сейчас ниже - код для скрітия заголовка визуально */
 .visually-hidden {
   position: absolute;
@@ -426,20 +430,123 @@ button {
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  /* анимация фона и окна */
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 250ms ease-in-out opacity 250ms ease-in-out;
 }
 .is-hidden {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .modal {
   position: relative;
-  width: 610px;
+  width: 100%;
+  max-width: 610px;
+  /* 100процентов от высоты экрана */
+  height: 100%;
+  max-height: 1058px;
+  /* позволяет прокручивать, если размер окна меньше */
+  overflow-y: auto;
   background-color: var(--c-primary-light);
   border-radius: 15px;
   padding: 48px;
+  transform: scale(1);
+}
+.backdrop.is-hidden .modal {
+  transform: scale(0);
 }
 .modal-close {
   position: absolute;
   top: 24px;
   right: 24px;
+}
+.modal-field {
+  margin-bottom: 18px;
+}
+
+.modal-label {
+  /* не задаем, тк указан в боди */
+  /* font-style: 14px; */
+  display: block;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+.modal-input {
+  width: 100%;
+  border: 1.5px solid var(--c-primary-tr);
+  border-radius: 13px;
+  background-color: var(--c-background-light);
+  padding: 22px 24px;
+  transition: border-color 250ms;
+}
+
+.modal-input-phone {
+  padding-left: 74px;
+}
+.modal-input:focus,
+.modal-textarea:focus {
+  /* отмена установки браузера */
+  outline: none;
+  border-color: var(--c-brand);
+}
+.modal-input::placeholder,
+.modal-textarea::placeholder {
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  color: #4040404d;
+}
+
+.modal-input-wrap {
+  position: relative;
+}
+.modal-input-icon {
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: fill 250ms;
+}
+/* этот код, если иконка одноцветная, и будет менять цвет при фокусе
+.modal-input:focus + .modal-input-icon{
+  fill:var(--c-brand) 
+}*/
+.modal-textarea {
+  min-height: 137px;
+  width: 100%;
+  border: 1.5px solid var(--c-primary-tr);
+  border-radius: 13px;
+  background-color: var(--c-background-light);
+  padding: 22px 24px;
+  resize: none;
+  outline: none;
+  transition: border-color 250ms;
+}
+
+/* .modal-checkbox {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  gap: 20px;
+} */
+
+/* .modal-checkbox-check {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border: 1px solid var(--c-primary);
+  border-radius: 2px;
+} */
+
+/* .modal-checkbox-input:checked + .modal-checkbox-check {
+  background-color: var(--c-brand);
+} */
+.modal-button {
+  display: block;
+  margin: 0 auto;
 }

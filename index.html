@@ -65,7 +65,9 @@
               moment of pure delight!
             </h1>
             <div class="hero-actions">
-              <button class="button-primary" type="button" data-modal-open>Buy now</button>
+              <button class="button-primary" type="button" data-modal-open>
+                Buy now
+              </button>
               <a class="hero-button" href="#">How it’s made</a>
               <a class="hero-arrow" href="#advantage-section"
                 >scroll down
@@ -397,19 +399,114 @@
       </section>
     </main>
     <footer></footer>
-    <div class="backdrop is-hidden" data-modal>
+
+    <div class="backdrop" data-modal>
       <div class="modal">
-        <button class="modal-close" data-modal-close>X</button>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, fuga
-          iusto quia natus tenetur quam earum ullam vitae maxime rem error iure
-          dolorum esse perferendis tempore excepturi similique suscipit
-          laboriosam in minima nostrum facilis itaque quibusdam dignissimos.
-          Quam quaerat, soluta sapiente, beatae enim laudantium veritatis, vel
-          eius officiis atque quia.
-        </p>
+        <button class="modal-close" data-modal-close>close(X)</button>
+        <h2 class="section-title">Buy now</h2>
+
+        <form name="contacr-form" autocomplete="off">
+          <fieldset>
+            <legend class="modal-label">Personal information</legend>
+            <!-- name -->
+            <div class="modal-field">
+              <!-- class="modal-label" не добавляется потом у что он все равно не виден -->
+              <label class="visually-hidden" for="user-name">Name</label>
+              <input
+                class="modal-input"
+                id="user-name"
+                type="text"
+                name="user-name"
+                placeholder="name"
+              />
+            </div>
+            <!-- surname -->
+            <div class="modal-field">
+              <!-- class="modal-label" не добавляется потом у что он все равно не виден -->
+              <label class="visually-hidden" for="user-surname">Surname</label>
+              <input
+                class="modal-input"
+                id="user-surname"
+                type="text"
+                name="user-surname"
+                placeholder="surname"
+              />
+            </div>
+            <!-- email -->
+            <div class="modal-field">
+              <label class="modal-label" for="user-email">Email</label>
+
+              <input
+                class="modal-input"
+                id="user-email"
+                type="email"
+                name="user-email"
+                placeholder="enter your email"
+              />
+            </div>
+            <!-- phone  -->
+            <div class="modal-field">
+              <label class="modal-label" for="user-tel">Phone number </label>
+              <div class="modal-input-wrap">
+                <svg class="modal-input-icon" width="32" height="32">
+                  <use href="./Images/icons.svg#icon-Frame"></use>
+                </svg>
+
+                <input
+                  class="modal-input modal-input-phone"
+                  id="user-tel"
+                  type="tel"
+                  name="user-tel"
+                  placeholder="Phone number"
+                />
+              </div>
+            </div>
+            <!-- credit card -->
+            <div class="modal-field">
+              <label class="modal-label" for="user-tel">Card number</label>
+              <input
+                class="modal-input"
+                id="user-card-number"
+                type="tel"
+                name="user-card-number"
+                placeholder="enter card"
+              />
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend class="visually-hidden">additional information</legend>
+            <div>
+              <label for="user-comment" class="modal-label">Comment</label>
+              <textarea
+                class="modal-textarea"
+                id="user-comment"
+                name="user-comment"
+                placeholder="Enter text"
+              ></textarea>
+            </div>
+          </fieldset>
+          <!-- <div class="modal-checkbox">
+            <input
+              class="visually-hidden modal-checkbox-input"
+              id="privacy-policy"
+              type="checkbox"
+              name="privacy-policy"
+            />
+            <span class="modal-checkbox-check">
+              
+            </span>
+            <label class="modal-checkbox-label" for="privacy-policy"
+              >i agree with <a href="#"> privacy policy</a></label
+            >
+          </div> -->
+          <button class="button-primary modal-button" type="submit">
+            Submit
+          </button>
+        </form>
       </div>
     </div>
+
     <!-- <script>сюда подключается управление открітием и закрітием окна</script> -->
   </body>
 </html>
