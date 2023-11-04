@@ -528,24 +528,24 @@ fieldset {
   transition: border-color 250ms;
 }
 
-/* .modal-checkbox {
+.modal-checkbox {
   display: flex;
   align-items: center;
   margin: 20px 0;
   gap: 20px;
-} */
+}
 
-/* .modal-checkbox-check {
+.modal-checkbox-check {
   display: block;
   width: 14px;
   height: 14px;
   border: 1px solid var(--c-primary);
   border-radius: 2px;
-} */
+}
 
-/* .modal-checkbox-input:checked + .modal-checkbox-check {
+.modal-checkbox-input:checked + .modal-checkbox-check {
   background-color: var(--c-brand);
-} */
+}
 .modal-button {
   display: block;
   margin: 0 auto;
