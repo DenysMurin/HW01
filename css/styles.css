@@ -74,8 +74,8 @@ fieldset {
   margin-bottom: 50px;
 }
 .container {
-  width: 100%;
-  /* width: 1200px; */
+  /* width: 100%; */
+  width: 1200px;
   margin: 0 auto;
   padding: 0 32px;
 }
@@ -390,11 +390,12 @@ fieldset {
 
 .reviews-list {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   gap: 28px;
 }
 .reviews-item {
   flex-basis: calc((100% - 56px) / 3);
+  /* flex-basis: 100%; */
   position: relative;
 }
 .review-image {
@@ -403,10 +404,7 @@ fieldset {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-/* .review-name {
-} */
-/* .review-description {
-} */
+
 .review {
   border: 1px solid var(--c-primary-tr);
   border-radius: 15px;
